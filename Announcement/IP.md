@@ -37,9 +37,14 @@
 
 >10.21更改内容：内网穿透由SakuraFrp更换为LoCyanFrp
 
->服务器状态监测：https://stats.uptimerobot.com/8yWxocOXOx
+>服务器状态监测：[点这里](https://stats.uptimerobot.com/8yWxocOXOx)
 >当前监测状态：
 >生存一服：持续监测
 >创造一服：暂停监测
+
+---
+
+客户端文件可从以下连接获取：[点这里](https://tpod14077-my.sharepoint.com/:f:/g/personal/gong1gong4_tpod14077_onmicrosoft_com/EvR5wuPmNC1Cjuo8dZnpfRsB88gQhJCEDSAAuEoX-xklSA?e=Rd73ug)
+
 
 ![白子点赞](./Images/白子点赞.jpg "白子点赞")
