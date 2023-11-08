@@ -37,6 +37,9 @@
 
 >10.21更改内容：内网穿透由SakuraFrp更换为LoCyanFrp
 
->10.22更新内容：一服实时监测：https://mcsrvstat.us/server/ddns.ganshity.top:62319
+>服务器状态监测：https://stats.uptimerobot.com/8yWxocOXOx
+>当前监测状态：
+>生存一服：持续监测
+>创造一服：暂停监测
 
 ![白子点赞](./Images/白子点赞.jpg "白子点赞")
