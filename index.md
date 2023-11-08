@@ -13,4 +13,8 @@ QQ号：3390238541
 ## 友情链接
 
 [病度IvI 的哔哩哔哩账号](https://space.bilibili.com/277750003)
+[沙勒白子 的哔哩哔哩账号](https://space.bilibili.com/524299938)
+
+---
+
 [蔚蓝档案国服官网](https://bluearchive-cn.com/)
