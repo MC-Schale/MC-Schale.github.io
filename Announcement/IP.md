@@ -7,7 +7,7 @@
 
 ## Java版IP：（华中·崇阳-1号）
 
-`space.mc-schale.top:62319`
+`play.mc-schale.top:62319`
 
 `ddns.ganshity.top:62319` (备用)
 
