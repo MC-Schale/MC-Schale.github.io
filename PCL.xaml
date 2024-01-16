@@ -7,7 +7,7 @@
         <TextBlock Margin="0,0,0,4"
             Text="服务器内严禁讨论原神" />
     
-    <local:MyButton Margin="0,4,0,0" Width="250" Height="35"
+    <local:MyButton Margin="0,5,0,0" Width="250" Height="35"
         Text="启动 1.20.1 并进入 MC-Schale 服务器" EventType="启动游戏" EventData="1.20.1|play.mc-schale.top:62319" ToolTip="服务器 IP：play.mc-schale.top:62319" />
     <!-- <local:MyButton Width="140" Height="35" HorizontalAlignment="Left" Padding="0,5,0,0" -->
     <local:MyButton Margin="0,5,0,0" Width="250" Height="35"
