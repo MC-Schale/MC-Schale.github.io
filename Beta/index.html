@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="css/mdui.min.css" />
     <script src="js/mdui.min.js"></script>
     <script src="js/jquery.min.js"></script>
+
+    <audio id="backgroundMusic" src="./Resources/Music/BackgroundMusic1.mp3" loop style="display:none;"></audio>
+
 </head>
 
 <body class="mdui-bottom-nav-fixed mdui-appbar-with-toolbar mdui-theme-primary-blue mdui-theme-accent-blue mdui-theme-layout-auto mdui-loaded">
@@ -23,7 +26,27 @@
                 MC-Schale
             </a>
             <a href="index.html#" class="mdui-typo-title">首页</a>
+            <!-- <div class="mdui-toolbar-spacer"></div> -->
+
             <div class="mdui-toolbar-spacer"></div>
+            <!-- <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+              <i class="mdui-icon material-icons">search</i>
+            </a> -->
+            <!-- <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '背景音乐'}" onclick="toggleBackgroundMusic()">
+                <i class="mdui-icon material-icons">music_note</i>
+            </a> -->
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '背景音乐'}" onclick="toggleBackgroundMusic()">
+                <i id="musicIcon" class="mdui-icon material-icons">music_note</i>
+            </a>
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+                <i class="mdui-icon material-icons">refresh</i>
+            </a>
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+                <i class="mdui-icon material-icons">more_vert</i>
+            </a>
+          </div>
+
+
         </div>
     </header>
     <div class="mdui-drawer mdui-color-white mdui-drawer-full-height mdui-drawer-close" id="main-drawer">
@@ -184,11 +207,107 @@
             <br>
     </div>
 
+    <div class="mdui-container" style="max-width: 800px;">
+        <br>
+        <div class="mdui-card" style="border-radius: 12px;">
+            <div class="mdui-card-media">
+                <img src="./images/background.jpg" style="max-height: 300px;object-fit: cover;" />
+            </div>
+            <div class="mdui-card-primary">
+                <div class="mdui-card-primary-title">关于创始人</div>
+                <div class="mdui-card-primary-subtitle">这是服务器的创始人</div>
+            </div>
+                <div class="mdui-card-content">
+                
+                    <div class="mdui-card">
+
+                        <!-- 卡片头部，包含头像、标题、副标题 -->
+                        <div class="mdui-card-header">
+                            <img class="mdui-card-header-avatar" src="./images/Peoples/bdlvl.jpg"/>
+                            <div class="mdui-card-header-title">病度lvl</div>
+                            <div class="mdui-card-header-subtitle">MC-Schale 服务器创始人 & PR/AE 爱好者</div>
+                        </div>
+                  
+                        <!-- 卡片的媒体内容，可以包含图片、视频等媒体内容，以及标题、副标题 -->
+                        <div class="mdui-card-media">
+                            <img src="./images/CardBackground1.png"/>
+                  
+                            <!-- 卡片中可以包含一个或多个菜单按钮 -->
+                            <div class="mdui-card-menu">
+                            <!-- <button class="mdui-btn mdui-btn-icon mdui-text-color-white">
+                                <i class="mdui-icon material-icons">launch</i>
+                            </button> -->
+
+                            <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-tooltip="{content: '在新窗口中打开'}" onclick="openNewTab('https://space.bilibili.com/277750003');">
+                                <i class="mdui-icon material-icons">launch</i>
+                            </button>
+                        
+                        </div>
+                    </div>
+                  
+                    <!-- 卡片的标题和副标题 -->
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">不知道写什么</div>
+                        <div class="mdui-card-primary-subtitle">111</div>
+                    </div>
+                  
+                    <!-- 卡片的内容 -->
+                    <div class="mdui-card-content">你好</div>
+                  
+                    <!-- 卡片的按钮 -->
+                    <div class="mdui-card-actions">
+                      <!-- <button class="mdui-btn mdui-ripple">action 1</button> -->
+                      <button class="mdui-btn mdui-ripple" mdui-tooltip="{content: '在新窗口中打开'}" onclick="openNewTab('https://space.bilibili.com/277750003')">哔哩哔哩</button>
+
+                    </div>
+                  
+                  </div>
+
+            </div>
+
+        </div>
+
+            <br>
+    </div>
+
+
+
 </body>
+<!-- JavaScript 部分 -->
 
 <script>
     function openNewTab(url) {
         window.open(url, '_blank');
     }
-    </script>
+</script>
+
+<!-- JavaScript部分 -->
+<!-- <script>
+function toggleBackgroundMusic() {
+    var audioElement = document.getElementById('backgroundMusic');
     
+    // 判断当前音频播放状态并切换
+    if (audioElement.paused) {
+        audioElement.play();
+    } else {
+        audioElement.pause();
+    }
+}
+</script> -->
+
+<script>
+let audioElement = document.getElementById('backgroundMusic'); // 假设你已经有了audio元素
+let musicIcon = document.getElementById('musicIcon');
+
+function toggleBackgroundMusic() {
+    if (audioElement.paused) {
+        audioElement.play();
+        musicIcon.className = 'mdui-icon material-icons'; // 更改为暂停图标
+        musicIcon.textContent = 'pause';
+    } else {
+        audioElement.pause();
+        musicIcon.className = 'mdui-icon material-icons'; // 恢复为音乐图标
+        musicIcon.textContent = 'music_note';
+    }
+}
+</script>
