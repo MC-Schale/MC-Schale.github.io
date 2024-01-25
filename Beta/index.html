@@ -79,12 +79,86 @@
     }
 </style>
 
+<!-- 代码作用：更改顶栏文本颜色为白色 -->
+<!-- <style>
+    /* 更改顶栏文字颜色 */
+    .mdui-appbar {
+      color: #fff !important; /* 使用 '!important' 来确保优先级高于框架内联样式或主题样式 */
+    }
+
+    /* 如果需要更改工具栏中的按钮等元素的颜色 */
+    .mdui-toolbar a,
+    .mdui-toolbar span,
+    .mdui-toolbar i,
+    .mdui-toolbar button,
+    .mdui-toolbar .mdui-btn {
+      color: #fff !important;
+    }
+</style> -->
+
+<!-- <style>
+    /* 只修改顶栏内的文本颜色 */
+    .mdui-appbar a,
+    .mdui-appbar span,
+    .mdui-appbar button {
+        color: #fff !important;
+    }
+    
+    /* 如果顶栏内有MDUI图标，也可以单独设置其颜色 */
+    .mdui-appbar i.mdui-icon {
+        color: #000 !important; /* 使用你想要的图标颜色 */
+    }
+</style> -->
+
+<style>
+    /* 修改顶栏内的文本颜色 */
+    .mdui-appbar a,
+    .mdui-appbar span {
+        color: #fff !important;
+    }
+
+    /* 保持按钮颜色不变（如果需要） */
+    .mdui-appbar button.mdui-btn {
+        color: initial; /* 使用MDUI默认颜色，或自定义其他颜色 */
+    }
+
+    /* 单独修改顶栏内MDUI图标的颜色 */
+    .mdui-appbar i.mdui-icon {
+        color: #ffffff !important; /* 将此处的颜色值替换为你想要的颜色 */
+    }
+</style>
+
+<style>
+    /* 设置底部栏中按钮的文字颜色 */
+    .mdui-bottom-nav a.mdui-btn {
+        color: #fff !important;
+    }
+
+    /* 设置 hitokoto 文本的颜色 */
+    #hitokoto {
+        color: #fff !important;
+    }
+</style>
+
+<!-- 控制 MDUI 卡片的全局圆角样式（请注意：如果卡片元素设置了单独的内联样式或具有更高优先级的CSS规则，则此全局设置可能被覆盖） -->
+<style>
+    /* 设置卡片的圆角为10px */
+    .mdui-card {
+        /* border-radius: 10px; */
+        /* 设置卡片默认圆角数值 */
+        border-radius: 5px;
+    }
+</style>
+
 </head>
 <!-- v1.0，无背景(目前视频背景需要用到它,以设置顶栏的颜色) -->
-<body class="mdui-bottom-nav-fixed mdui-appbar-with-toolbar mdui-theme-primary-blue mdui-theme-accent-blue mdui-theme-layout-auto mdui-loaded">
+<!-- <body class="mdui-bottom-nav-fixed mdui-appbar-with-toolbar mdui-theme-primary-blue mdui-theme-accent-blue mdui-theme-layout-auto mdui-loaded"> -->
 <!-- v1.1，有背景(自定义图片) -->
 <!-- <body class="mdui-bottom-nav-fixed mdui-appbar-with-toolbar mdui-theme-primary-blue mdui-theme-accent-blue mdui-theme-layout-auto mdui-loaded" style="background-image: url('./images/CardBackground1.png'); background-size: cover;"></body> -->
-    
+
+<!-- v1.2，更改了顶栏的文本颜色 -->
+<body class="mdui-bottom-nav-fixed mdui-appbar-with-toolbar mdui-theme-primary-blue mdui-theme-accent-blue mdui-theme-layout-auto mdui-loaded"></body>
+
     <!-- 视频背景 -->
     <video class="video-background" autoplay loop muted playsinline>
         <source src="./Resources/Video/mika.mp4" type="video/mp4">
@@ -190,7 +264,10 @@
 
     <div class="mdui-container" style="max-width: 800px;">
         <br>
-        <div class="mdui-card" style="border-radius: 12px;">
+        <!-- 原设置 -->
+        <!-- <div class="mdui-card" style="border-radius: 12px;"> -->
+        <!-- 应用全局设置（MDUI 卡片的圆角） -->
+        <div class="mdui-card">
             <!-- <div class="mdui-card-media">
                 <img src="./images/background.jpg" style="max-height: 300px;object-fit: cover;" />
             </div> -->
@@ -252,7 +329,7 @@
                         <div class="mdui-card custom-width-card mdui-shadow-2">
                             <div class="mdui-card-primary">
                                 <i class="mdui-icon material-icons mdui-icon-grayscale mdui-icon-large">thumb_up</i>
-                                <div class="mdui-card-primary-title">年轻的管理团队</div>
+                                <div class="mdui-card-primary-title">有观念的团队</div>
                                 <div class="mdui-card-primary-subtitle">文本-测试-不知道写什么了</div>
                             </div>
                         </div>
@@ -260,9 +337,9 @@
                         <!-- 卡片2 -->
                         <div class="mdui-card custom-width-card mdui-shadow-2">
                             <div class="mdui-card-primary">
-                                <i class="mdui-icon material-icons mdui-icon-grayscale mdui-icon-large">videogame_asset</i>
-                                <div class="mdui-card-primary-title">服务器特色</div>
-                                <div class="mdui-card-primary-subtitle">2</div>
+                                <i class="mdui-icon material-icons mdui-icon-grayscale mdui-icon-large">done_all</i>
+                                <div class="mdui-card-primary-title">原版的体验</div>
+                                <div class="mdui-card-primary-subtitle">服务器没有任何Mod，只有插件</div>
                             </div>
                         </div>
 
@@ -299,12 +376,16 @@
 
     <div class="mdui-container" style="max-width: 800px;">
         <br>
-        <div class="mdui-card" style="border-radius: 12px;">
+        <!-- 原设置 -->
+        <!-- <div class="mdui-card" style="border-radius: 12px;"> -->
+        <!-- 应用全局设置（MDUI 卡片的圆角） -->
+        <div class="mdui-card">
+
             <!-- <div class="mdui-card-media">
                 <img src="./images/background.jpg" style="max-height: 300px;object-fit: cover;" />
             </div> -->
             <div class="mdui-card-primary">
-                <div class="mdui-card-primary-title">关于创始人</div>
+                <div class="mdui-card-primary-title">创始人</div>
                 <div class="mdui-card-primary-subtitle">这是服务器的创始人</div>
             </div>
                 <div class="mdui-card-content">
@@ -315,40 +396,48 @@
                         <div class="mdui-card-header">
                             <img class="mdui-card-header-avatar" src="./images/Peoples/bdlvl.jpg"/>
                             <div class="mdui-card-header-title">病度lvl</div>
-                            <div class="mdui-card-header-subtitle">MC-Schale 服务器创始人 & PR/AE 爱好者</div>
+                            <div class="mdui-card-header-subtitle">MC-Schale 服务器创始人及 bdUnion 工会创始人</div>
                         </div>
-                  
+                      
                         <!-- 卡片的媒体内容，可以包含图片、视频等媒体内容，以及标题、副标题 -->
                         <div class="mdui-card-media">
-                            <!-- <img src="./images/CardBackground1Mini.png"/> -->
-                  
+                            <img src="./images/bd-Union.png"/>
+                      
                             <!-- 卡片中可以包含一个或多个菜单按钮 -->
                             <div class="mdui-card-menu">
+                            <!-- 原版 -->
+                            <!-- <button class="mdui-btn mdui-btn-icon mdui-text-color-white">
+                                <i class="mdui-icon material-icons">share</i>
+                            </button> -->
+                            <!-- v1，没有提示 -->
                             <!-- <button class="mdui-btn mdui-btn-icon mdui-text-color-white">
                                 <i class="mdui-icon material-icons">launch</i>
                             </button> -->
-
+                            <!-- v2，有提示 -->
                             <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-tooltip="{content: '在新窗口中打开'}" onclick="openNewTab('https://space.bilibili.com/277750003');">
                                 <i class="mdui-icon material-icons">launch</i>
                             </button>
-                        
+                            </div>
                         </div>
-                    </div>
-                  
-                    <!-- 卡片的标题和副标题 -->
-                    <div class="mdui-card-primary">
-                        <div class="mdui-card-primary-title">不知道写什么</div>
-                        <div class="mdui-card-primary-subtitle">111</div>
-                    </div>
-                  
-                    <!-- 卡片的内容 -->
-                    <div class="mdui-card-content">你好</div>
-                  
-                    <!-- 卡片的按钮 -->
-                    <div class="mdui-card-actions">
-                      <!-- <button class="mdui-btn mdui-ripple">action 1</button> -->
-                      <button class="mdui-btn mdui-ripple" mdui-tooltip="{content: '在新窗口中打开'}" onclick="openNewTab('https://space.bilibili.com/277750003')">哔哩哔哩</button>
-
+                      
+                        <!-- 卡片的标题和副标题 -->
+                        <div class="mdui-card-primary">
+                          <div class="mdui-card-primary-title">Title</div>
+                          <div class="mdui-card-primary-subtitle">Subtitle</div>
+                        </div>
+                      
+                        <!-- 卡片的内容 -->
+                        <div class="mdui-card-content">子曰：「学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知，而不愠，不亦君子乎？」</div>
+                      
+                        <!-- 卡片的按钮 -->
+                        <div class="mdui-card-actions">
+                          <button class="mdui-btn mdui-ripple">action 1</button>
+                          <button class="mdui-btn mdui-ripple">action 2</button>
+                          <button class="mdui-btn mdui-btn-icon mdui-float-right">
+                            <i class="mdui-icon material-icons">expand_more</i>
+                          </button>
+                        </div>
+                      
                     </div>
                   
                 </div>
@@ -362,13 +451,16 @@
 
     <div class="mdui-container" style="max-width: 800px;">
         <br>
-        <div class="mdui-card" style="border-radius: 12px;">
+        <!-- 原设置 -->
+        <!-- <div class="mdui-card" style="border-radius: 12px;"> -->
+        <!-- 应用全局设置（MDUI 卡片的圆角） -->
+        <div class="mdui-card">
             <!-- <div class="mdui-card-media">
                 <img src="./images/background.jpg" style="max-height: 300px;object-fit: cover;" />
             </div> -->
             <div class="mdui-card-primary">
-                <div class="mdui-card-primary-title">关于创始人</div>
-                <div class="mdui-card-primary-subtitle">这是服务器的创始人</div>
+                <div class="mdui-card-primary-title">关于团队</div>
+                <div class="mdui-card-primary-subtitle">这是可以查看团队信息</div>
             </div>
                 <div class="mdui-card-content">
                 
@@ -381,22 +473,24 @@
                             <div class="mdui-card-header-subtitle" mdui-tooltip="{content: 'MC-Schale 创始人 & 卑微初三学子 & PR大神'}">MC-Schale 创始人 & 卑微初三学子 & PR大神</div>
                         </div>
                   
+                        <!-- 暂时注释，没有想到实际的作用 -->
                         <!-- 卡片的媒体内容，可以包含图片、视频等媒体内容，以及标题、副标题 -->
-                        <div class="mdui-card-media">
-                            <!-- <img src="./images/CardBackground1.png"/> -->
+                        <!-- <div class="mdui-card-media"> -->
+                            <!-- <img src="./images/CardBackground1Mini.png"/> -->
                   
                             <!-- 卡片中可以包含一个或多个菜单按钮 -->
-                            <div class="mdui-card-menu">
-                            <!-- <button class="mdui-btn mdui-btn-icon mdui-text-color-white">
-                                <i class="mdui-icon material-icons">launch</i>
-                            </button> -->
-    
-                                <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-tooltip="{content: '在新窗口中打开'}" onclick="openNewTab('https://space.bilibili.com/277750003');">
+                            <!-- <div class="mdui-card-menu"> -->
+                                <!-- v1，没有提示 -->
+                                <!-- <button class="mdui-btn mdui-btn-icon mdui-text-color-white">
                                     <i class="mdui-icon material-icons">launch</i>
-                                </button>
+                                </button> -->
+                                <!-- v2，有提示 -->
+                                <!-- <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-tooltip="{content: '在新窗口中打开'}" onclick="openNewTab('https://space.bilibili.com/277750003');">
+                                    <i class="mdui-icon material-icons">launch</i>
+                                </button> -->
+                            <!-- </div> -->
                         
-                            </div>
-                        </div>
+                        <!-- </div> -->
                   
                         <!-- 卡片的标题和副标题 -->
                         <!-- <div class="mdui-card-primary">
@@ -438,22 +532,24 @@
                             <div class="mdui-card-header-subtitle" mdui-tooltip="{content: 'JAVA爱好者 & MC插件制作 & MC指令师'}">JAVA爱好者 & MC插件制作 & MC指令师</div>
                         </div>
                   
+                        <!-- 暂时注释，没有想到实际的作用 -->
                         <!-- 卡片的媒体内容，可以包含图片、视频等媒体内容，以及标题、副标题 -->
-                        <div class="mdui-card-media">
-                            <!-- <img src="./images/CardBackground1.png"/> -->
+                        <!-- <div class="mdui-card-media"> -->
+                            <!-- <img src="./images/CardBackground1Mini.png"/> -->
                   
                             <!-- 卡片中可以包含一个或多个菜单按钮 -->
-                            <div class="mdui-card-menu">
-                            <!-- <button class="mdui-btn mdui-btn-icon mdui-text-color-white">
-                                <i class="mdui-icon material-icons">launch</i>
-                            </button> -->
-    
-                                <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-tooltip="{content: '在新窗口中打开'}" onclick="openNewTab('about:blank');">
+                            <!-- <div class="mdui-card-menu"> -->
+                                <!-- v1，没有提示 -->
+                                <!-- <button class="mdui-btn mdui-btn-icon mdui-text-color-white">
                                     <i class="mdui-icon material-icons">launch</i>
-                                </button>
+                                </button> -->
+                                <!-- v2，有提示 -->
+                                <!-- <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-tooltip="{content: '在新窗口中打开'}" onclick="openNewTab('https://space.bilibili.com/277750003');">
+                                    <i class="mdui-icon material-icons">launch</i>
+                                </button> -->
+                            <!-- </div> -->
                         
-                            </div>
-                        </div>
+                        <!-- </div> -->
                   
                         <!-- 卡片的标题和副标题 -->
                         <!-- <div class="mdui-card-primary">
@@ -495,22 +591,24 @@
                             <div class="mdui-card-header-subtitle" mdui-tooltip="{content: 'V我五十 & KFC代言人 & 非常讨厌麦当劳 & 易语言大蛇 & 肝帝'}">V我五十 & KFC代言人 & 非常讨厌麦当劳 & 易语言大蛇 & 肝帝</div>
                         </div>
                   
+                        <!-- 暂时注释，没有想到实际的作用 -->
                         <!-- 卡片的媒体内容，可以包含图片、视频等媒体内容，以及标题、副标题 -->
-                        <div class="mdui-card-media">
-                            <!-- <img src="./images/CardBackground1.png"/> -->
+                        <!-- <div class="mdui-card-media"> -->
+                            <!-- <img src="./images/CardBackground1Mini.png"/> -->
                   
                             <!-- 卡片中可以包含一个或多个菜单按钮 -->
-                            <div class="mdui-card-menu">
-                            <!-- <button class="mdui-btn mdui-btn-icon mdui-text-color-white">
-                                <i class="mdui-icon material-icons">launch</i>
-                            </button> -->
-    
-                                <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-tooltip="{content: '在新窗口中打开'}" onclick="openNewTab('https://space.bilibili.com/514279030');">
+                            <!-- <div class="mdui-card-menu"> -->
+                                <!-- v1，没有提示 -->
+                                <!-- <button class="mdui-btn mdui-btn-icon mdui-text-color-white">
                                     <i class="mdui-icon material-icons">launch</i>
-                                </button>
+                                </button> -->
+                                <!-- v2，有提示 -->
+                                <!-- <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-tooltip="{content: '在新窗口中打开'}" onclick="openNewTab('https://space.bilibili.com/277750003');">
+                                    <i class="mdui-icon material-icons">launch</i>
+                                </button> -->
+                            <!-- </div> -->
                         
-                            </div>
-                        </div>
+                        <!-- </div> -->
                   
                         <!-- 卡片的标题和副标题 -->
                         <!-- <div class="mdui-card-primary">
@@ -552,22 +650,24 @@
                             <div class="mdui-card-header-subtitle" mdui-tooltip="{content: '群吉祥物 & 涩涩管理大师 & 喜欢睡觉'}">群吉祥物 & 涩涩管理大师 & 喜欢睡觉</div>
                         </div>
                   
+                        <!-- 暂时注释，没有想到实际的作用 -->
                         <!-- 卡片的媒体内容，可以包含图片、视频等媒体内容，以及标题、副标题 -->
-                        <div class="mdui-card-media">
-                            <!-- <img src="./images/CardBackground1.png"/> -->
+                        <!-- <div class="mdui-card-media"> -->
+                            <!-- <img src="./images/CardBackground1Mini.png"/> -->
                   
                             <!-- 卡片中可以包含一个或多个菜单按钮 -->
-                            <div class="mdui-card-menu">
-                            <!-- <button class="mdui-btn mdui-btn-icon mdui-text-color-white">
-                                <i class="mdui-icon material-icons">launch</i>
-                            </button> -->
-    
-                                <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-tooltip="{content: '在新窗口中打开'}" onclick="openNewTab('about:blank');">
+                            <!-- <div class="mdui-card-menu"> -->
+                                <!-- v1，没有提示 -->
+                                <!-- <button class="mdui-btn mdui-btn-icon mdui-text-color-white">
                                     <i class="mdui-icon material-icons">launch</i>
-                                </button>
+                                </button> -->
+                                <!-- v2，有提示 -->
+                                <!-- <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-tooltip="{content: '在新窗口中打开'}" onclick="openNewTab('https://space.bilibili.com/277750003');">
+                                    <i class="mdui-icon material-icons">launch</i>
+                                </button> -->
+                            <!-- </div> -->
                         
-                            </div>
-                        </div>
+                        <!-- </div> -->
                   
                         <!-- 卡片的标题和副标题 -->
                         <!-- <div class="mdui-card-primary">
@@ -609,22 +709,24 @@
                             <div class="mdui-card-header-subtitle" mdui-tooltip="{content: '主要负责了官网音乐'}">忙常人，启动！</div>
                         </div>
                   
+                        <!-- 暂时注释，没有想到实际的作用 -->
                         <!-- 卡片的媒体内容，可以包含图片、视频等媒体内容，以及标题、副标题 -->
-                        <div class="mdui-card-media">
-                            <!-- <img src="./images/CardBackground1.png"/> -->
+                        <!-- <div class="mdui-card-media"> -->
+                            <!-- <img src="./images/CardBackground1Mini.png"/> -->
                   
                             <!-- 卡片中可以包含一个或多个菜单按钮 -->
-                            <div class="mdui-card-menu">
-                            <!-- <button class="mdui-btn mdui-btn-icon mdui-text-color-white">
-                                <i class="mdui-icon material-icons">launch</i>
-                            </button> -->
-    
-                                <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-tooltip="{content: '在新窗口中打开'}" onclick="openNewTab('https://music.163.com/#/artist?id=35946937');">
+                            <!-- <div class="mdui-card-menu"> -->
+                                <!-- v1，没有提示 -->
+                                <!-- <button class="mdui-btn mdui-btn-icon mdui-text-color-white">
                                     <i class="mdui-icon material-icons">launch</i>
-                                </button>
+                                </button> -->
+                                <!-- v2，有提示 -->
+                                <!-- <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-tooltip="{content: '在新窗口中打开'}" onclick="openNewTab('https://space.bilibili.com/277750003');">
+                                    <i class="mdui-icon material-icons">launch</i>
+                                </button> -->
+                            <!-- </div> -->
                         
-                            </div>
-                        </div>
+                        <!-- </div> -->
                   
                         <!-- 卡片的标题和副标题 -->
                         <!-- <div class="mdui-card-primary">
@@ -666,22 +768,24 @@
                             <div class="mdui-card-header-subtitle" mdui-tooltip="{content: '主要负责了官网(羁绊酱版本)的开发工作'}">网络大神 & 思科网院杯北美区三等奖获得者 & MC-Schale 二服最废物腐竹</div>
                         </div>
                   
+                        <!-- 暂时注释，没有想到实际的作用 -->
                         <!-- 卡片的媒体内容，可以包含图片、视频等媒体内容，以及标题、副标题 -->
-                        <div class="mdui-card-media">
-                            <!-- <img src="./images/CardBackground1.png"/> -->
+                        <!-- <div class="mdui-card-media"> -->
+                            <!-- <img src="./images/CardBackground1Mini.png"/> -->
                   
                             <!-- 卡片中可以包含一个或多个菜单按钮 -->
-                            <div class="mdui-card-menu">
-                            <!-- <button class="mdui-btn mdui-btn-icon mdui-text-color-white">
-                                <i class="mdui-icon material-icons">launch</i>
-                            </button> -->
-    
-                                <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-tooltip="{content: '在新窗口中打开'}" onclick="openNewTab('about:blank');">
+                            <!-- <div class="mdui-card-menu"> -->
+                                <!-- v1，没有提示 -->
+                                <!-- <button class="mdui-btn mdui-btn-icon mdui-text-color-white">
                                     <i class="mdui-icon material-icons">launch</i>
-                                </button>
+                                </button> -->
+                                <!-- v2，有提示 -->
+                                <!-- <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-tooltip="{content: '在新窗口中打开'}" onclick="openNewTab('https://space.bilibili.com/277750003');">
+                                    <i class="mdui-icon material-icons">launch</i>
+                                </button> -->
+                            <!-- </div> -->
                         
-                            </div>
-                        </div>
+                        <!-- </div> -->
                   
                         <!-- 卡片的标题和副标题 -->
                         <!-- <div class="mdui-card-primary">
@@ -723,22 +827,24 @@
                             <div class="mdui-card-header-subtitle" mdui-tooltip="{content: '好有感觉，想被填满 & 网络男神 & 副群主'}">好有感觉，想被填满 & 网络男神 & 副群主</div>
                         </div>
                   
+                        <!-- 暂时注释，没有想到实际的作用 -->
                         <!-- 卡片的媒体内容，可以包含图片、视频等媒体内容，以及标题、副标题 -->
-                        <div class="mdui-card-media">
-                            <!-- <img src="./images/CardBackground1.png"/> -->
+                        <!-- <div class="mdui-card-media"> -->
+                            <!-- <img src="./images/CardBackground1Mini.png"/> -->
                   
                             <!-- 卡片中可以包含一个或多个菜单按钮 -->
-                            <div class="mdui-card-menu">
-                            <!-- <button class="mdui-btn mdui-btn-icon mdui-text-color-white">
-                                <i class="mdui-icon material-icons">launch</i>
-                            </button> -->
-    
-                                <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-tooltip="{content: '在新窗口中打开'}" onclick="openNewTab('about:blank');">
+                            <!-- <div class="mdui-card-menu"> -->
+                                <!-- v1，没有提示 -->
+                                <!-- <button class="mdui-btn mdui-btn-icon mdui-text-color-white">
                                     <i class="mdui-icon material-icons">launch</i>
-                                </button>
+                                </button> -->
+                                <!-- v2，有提示 -->
+                                <!-- <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-tooltip="{content: '在新窗口中打开'}" onclick="openNewTab('https://space.bilibili.com/277750003');">
+                                    <i class="mdui-icon material-icons">launch</i>
+                                </button> -->
+                            <!-- </div> -->
                         
-                            </div>
-                        </div>
+                        <!-- </div> -->
                   
                         <!-- 卡片的标题和副标题 -->
                         <!-- <div class="mdui-card-primary">
@@ -774,7 +880,36 @@
 
     <br>
 </div>
+<div class="mdui-bottom-nav mdui-color-theme" style="height: 70px;">
+    <div class="mdui-container mdui-valign">
+        <div class="mdui-row mdui-center">
 
+        </div>
+    </div>
+    <div style="position: absolute; bottom: 0px; left: 0px;">
+       <!-- <a href="/" target="_blank" class="mdui-btn mdui-ripple">MC-Schale 服务器</a> -->
+       <a href="/" class="mdui-btn mdui-ripple">MC-Schale 服务器</a>
+    </div>
+    <!-- <div style="position: absolute; bottom: -5px; right: 0px;">
+        <img src="images/logo-white.png" />
+    </div> -->
+    <div style="position: absolute; bottom: -5px; right: 0px;">
+        <p id="hitokoto">
+            <!-- <a href="#" id="hitokoto_text">:D 获取中...</a> -->
+            <!-- <a href="#" id="hitokoto_text" class="mdui-btn mdui-ripple">:D 获取中...</a> -->
+        </p>
+    </div>
+    <!-- <script>
+        fetch('https://v1.hitokoto.cn')
+          .then(response => response.json())
+          .then(data => {
+            const hitokoto = document.querySelector('#hitokoto_text')
+            hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`
+            hitokoto.innerText = data.hitokoto
+          })
+          .catch(console.error)
+    </script> -->
+</div>
 
 
 
