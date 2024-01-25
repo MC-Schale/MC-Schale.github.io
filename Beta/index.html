@@ -431,7 +431,27 @@
                       
                         <!-- 卡片的按钮 -->
                         <div class="mdui-card-actions">
-                          <button class="mdui-btn mdui-ripple">action 1</button>
+                          <!-- <button class="mdui-btn mdui-ripple">商务联系</button> -->
+                          <button id="copyButton-QQid" class="mdui-btn mdui-ripple">商务联系</button>
+                          <script>
+                            document.getElementById('copyButton-QQid').addEventListener('click', function() {
+                              // 假设要复制的文本是预先定义好的变量或DOM元素内容
+                              var textToCopy = '3390238541';
+                            
+                              // 尝试复制文本到剪贴板
+                              try {
+                                navigator.clipboard.writeText(textToCopy);
+                              } catch (err) {
+                                console.error('Failed to copy: ', err);
+                              }
+                            
+                              // 显示Snackbar消息
+                              mdui.snackbar({
+                                message: 'QQ 号已经复制到剪贴板！',
+                                position: 'left-bottom'
+                              });
+                            });
+                            </script>
                           <button class="mdui-btn mdui-ripple">action 2</button>
                           <button class="mdui-btn mdui-btn-icon mdui-float-right">
                             <i class="mdui-icon material-icons">expand_more</i>
